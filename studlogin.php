@@ -67,7 +67,7 @@ if($result->num_rows>0)
         $_SESSION["id"]=$id;
         $_SESSION["name"]=$name;
         echo$id=$row["id"];
-        header('Location:student.php');
+        header('Location:studprof.php');
     }
 
 

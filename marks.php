@@ -11,7 +11,7 @@
 <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
   <ul class="navbar-nav">
     <li class="nav-item add">
-    <h4><b>PLACEMENT</b></h4>
+    <a class="nav-link active" href="studprof.php">Profile</a>
     </li>
    </ul>
 </nav> 
