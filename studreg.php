@@ -12,17 +12,9 @@
 <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
   <ul class="navbar-nav">
     <li class="nav-item add">
-      <a class="nav-link active" href="index.php">Student Registration</a>
+      <a class="nav-link active" href="#">Student Registration</a>
     </li>
-    <li class="nav-item">
-      <a class="nav-link" href="searchstud.php">Search Student</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="studdelete.php">Delete Student</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="studupdate.php">Update Student</a>
-    </li>
+   
   </ul>
 </nav>
     

@@ -9,7 +9,7 @@
 </head>
 <body style="background-color: grey;" >
 <!-- Grey with black text -->
-<nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+<!-- <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
   <ul class="navbar-nav">
     <li class="nav-item">
       <a class="nav-link active" href="companyreg.php">Company Registration</a>
@@ -24,7 +24,7 @@
       <a class="nav-link" href="compupdate.php">Update Company</a>
     </li>
   </ul>
-</nav>
+</nav> -->
     
     <div class="container">
         <div class="row">
@@ -34,7 +34,7 @@
         <div class="col col-12 col-sm-6">
               <form action="" method="post">
                 <table class="table">
-                    <h1><center><strong>REGISTRATION</strong></center></h1>
+                    <h1><center><strong>COMPANY REGISTRATION</strong></center></h1>
                     <tr>
                         <td><b>Name</b></td>
                         <td><input type="text" class="form-control" name="name"></td>
@@ -59,6 +59,12 @@
                     <tr>
                         <td></td>
                         <td><input type="submit" value="SUBMIT" class="btn btn-success" name="submit"></td>
+                    </tr>
+
+
+                    <tr>
+                        <td></td>
+                        <td><a href="companylogin.php">Company LogIn</a> </td>
                     </tr>
                     
                 </table>

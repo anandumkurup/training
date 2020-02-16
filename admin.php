@@ -34,6 +34,34 @@
                     <td></td>
                     <td><input type="submit" value="Login" class="btn btn-success" name="login"></td>
                     </tr>
+<tr>
+    <td></td>
+    <td>
+    <a href="companylogin.php">Company LogIn</a>
+    </td>
+</tr>
+
+<tr>
+    <td></td>
+    <td>
+    <a href="companyreg.php">Company Registration</a>
+    </td>
+</tr>
+<tr>
+    <td></td>
+    <td>
+    <a href="studlogin.php">Student LogIn</a>
+    </td>
+</tr>
+
+<tr>
+    <td></td>
+    <td>
+    <a href="studreg.php">Student Registration</a>
+    </td>
+</tr>
+
+
                     </table>
                 </form>
             </div>
@@ -66,7 +94,7 @@ if($result->num_rows>0)
         $name=$row["name"];
         $_SESSION["id"]=$id;
         $_SESSION["name"]=$name;
-        header('Location:index.php');
+        header('Location:company_approval.php');
     }
 
 

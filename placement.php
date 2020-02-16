@@ -23,10 +23,10 @@
         <div class="col col-12 col-sm-6">
               <form action="" method="POST">
                 <table class="table">
-                    <tr>
+                    <!-- <tr>
                         <td>Company ID</td>
                         <td><input type="text" class="form-control"name="company_id"></td>
-                    </tr>
+                    </tr> -->
                     <tr>
                         <td>Job Title</td>
                         <td><input type="text" class="form-control" name="job_title"></td>
@@ -54,9 +54,10 @@
     </body>
 </html>
 <?php
+session_start();
 if(isset($_POST["submit"]))
 {
-$company_id=$_POST["company_id"];
+ $company_id=$_SESSION["companyid"];
 $job_title=$_POST["job_title"];
 $job_desc=$_POST["job_desc"];
 $criteria=$_POST["criteria"];

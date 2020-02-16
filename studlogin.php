@@ -44,6 +44,7 @@
     </body>
 </html>
 <?php
+session_start();
 if(isset($_POST["login"]))
 {
 $server_name="localhost";
@@ -54,7 +55,10 @@ $connection=new mysqli($server_name,$db_username,$db_password,$db_name);
 $username=$_POST["username"];
 $password=$_POST["password"];
 
-$sql="SELECT `id`, `name`, `admno`, `dept`, `address`, `phoneno`, `username`, `password` FROM `student` WHERE `username`='$username' and `password`='$password'";
+$sql="SELECT `id`, `name`, `admno`, `dept`, `address`, `phoneno`, `username`,
+ `password` FROM `student` WHERE `username`='$username' and `password`='$password' 
+ and flag=1
+ ";
 $result=$connection->query($sql);
 
 if($result->num_rows>0)
@@ -64,7 +68,7 @@ if($result->num_rows>0)
     {
         $id=$row["id"];
         $name=$row["name"];
-        $_SESSION["id"]=$id;
+        $_SESSION["studid"]=$id;
         $_SESSION["name"]=$name;
         echo$id=$row["id"];
         header('Location:studprof.php');
@@ -74,7 +78,7 @@ if($result->num_rows>0)
 }
 else
 {
-    echo "Invalid Username or password";
+    echo "Invalid Username or password OR Student approval pending";
 }
 }
 ?>

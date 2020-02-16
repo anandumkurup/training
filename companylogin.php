@@ -35,6 +35,13 @@
                     <td></td>
                     <td><input type="submit" value="Login" class="btn btn-success" name="login"></td>
                     </tr>
+
+
+
+                    <tr>
+                    <td></td>
+                    <td> <a href="companyreg.php">New Companies Register Here</a>  </td>
+                    </tr>
                     </table>
                 </form>
             </div>
@@ -54,7 +61,8 @@ $db_name="training";
 $connection=new mysqli($server_name,$db_username,$db_password,$db_name);
 $username=$_POST["username"];
 $password=$_POST["password"];
-$sql="SELECT `id`, `name`, `manager`, `contactno`, `username`, `password` FROM `company` WHERE `username`='$username' and `password`='$password'";
+$sql="SELECT `id`, `name`, `manager`, `contactno`, `username`, `password` FROM `company` WHERE `username`='$username' and 
+`password`='$password' and flag=1";
 $result=$connection->query($sql);
 
 if($result->num_rows>0)
@@ -64,10 +72,10 @@ if($result->num_rows>0)
     {
         $id=$row["id"];
         $name=$row["name"];
-        $_SESSION["id"]=$id;
+        $_SESSION["companyid"]=$id;
         $_SESSION["name"]=$name;
         echo$id=$row["id"];
-        header('Location:company.php');
+        header('Location:placement.php');
     }
 
 

@@ -1,20 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body style="background-image:url('sky.jpg')";>
-<nav class="navbar navbar-expand-sm bg-primary navbar-dark">
-  <ul class="navbar-nav">
-    <li class="nav-item add">
-    <a class="nav-link active" href="studprof.php">Profile</a>
-    </li>
-   </ul>
-</nav> 
+<?php
+session_start();
+include './stud_navbar.php';
+
+
+
+?>
 <div class="container">
         <div class="row">
             <div class="col col-12 col-sm-3">
@@ -23,16 +13,25 @@
         <div class="col col-12 col-sm-6">
               <form action="" method="POST">
                 <table class="table">
-                    <tr>
-                        <td>Student ID</td>
-                        <td><input type="text" class="form-control"name="stud_id"></td>
-                    </tr>
+                  
                     <tr>
                         <td>Semester</td>
-                        <td><input type="text" class="form-control" name="sem"></td>
+                        <td>
+                        <select name="sem" class="form-control">
+
+                        <option value="S1">S1</option>
+                        <option value="S2">S2</option>
+                        <option value="S3">S3</option>
+                        <option value="S4">S4</option>
+                        <option value="S5">S5</option>
+                        <option value="S6">S6</option>
+                        
+                        </select>
+                        
+                        </td>
                     </tr>
                     <tr>
-                        <td>Marks</td>
+                        <td>CGPA</td>
                         <td><input type="text" class="form-control" name="cgpa"></td>
                     </tr>
                      <tr>
@@ -50,7 +49,7 @@
 <?php
 if(isset($_POST["submit"]))
 {
-$stud_id=$_POST["stud_id"];
+$stud_id=$studid=$_SESSION["studid"];;
 $sem=$_POST["sem"];
 $cgpa=$_POST["cgpa"];
 $server_name="localhost";
