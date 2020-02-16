@@ -22,6 +22,10 @@
       <a class="nav-link active" href="marks.php">Mark Entry</a>
     </li>
 
+    <li class="nav-item">
+      <a class="nav-link active" href="viewmarks.php">view marks</a>
+    </li>
+
    
     <li class="nav-item">
       <a class="nav-link active" href="admin.php">Log Out</a>

@@ -49,9 +49,9 @@ if($res->num_rows>0){
 
         <td>   $contactno  </td>
 
-        <td><Button type='submit' name='approvebtn'value='$id' class='btn btn-warning' > Approve </Button> </td>
+        <td><Button type='submit' name='approvebtn'value='$id' class='btn btn-success' > Approve </Button> </td>
 
-        <td><Button type='submit' name='rejectbtn'value='$id' class='btn btn-warning' > Reject </Button> </td>
+        <td><Button type='submit' name='rejectbtn'value='$id' class='btn btn-danger' > Reject </Button> </td>
 
     </tr>";
 
