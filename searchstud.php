@@ -48,7 +48,7 @@ if($result->num_rows>0)
       $getaddress=$row["address"];
       $getphoneno=$row["phoneno"];
     
-      echo "<table class ='table'>
+      echo "<table class ='table table-striped'>
             <tr><td>Name</td>
                 <td>$getname</td>
             <tr><td>Department</td>

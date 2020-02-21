@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body style="background-color: grey;"  >
+<body style="background-color: white;"  >
 
 
 <nav class="navbar navbar-expand-sm bg-primary navbar-dark">

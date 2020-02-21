@@ -24,9 +24,15 @@
 
         </div>
         <div class="col col-12 col-sm-6">
-              <form action="" method="post">
+              <form action="" method="post" enctype="multipart/form-data">
                 <table class="table">
                     <h1><center><strong>REGISTRATION</strong></center></h1>
+
+                    <tr>
+                        <td><b>Upload Photo</b></td>
+                        <td> <input class="file-upload-browse btn btn-gradient-primary" type="file" name="fileToUpload" id="fileToUpload"></td>
+                    </tr>
+
                     <tr>
                         <td><b>Name</b></td>
                         <td><input type="text" class="form-control"name="name"></td>
@@ -79,6 +85,25 @@
 <?php
 if(isset($_POST["submit"]))
 {
+    $server_name="localhost";
+$db_username="root";
+$db_password="";
+$db_name="training";
+$connection=new mysqli($server_name,$db_username,$db_password,$db_name);
+
+
+
+    $target_dir = "photos/";
+    $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
+    $tr=mysqli_real_escape_string($connection,$target_file);
+   
+   
+   if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
+    // echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.";
+   } else {
+     //echo "Sorry, there was an error uploading your file.";
+   }
+
 $name=$_POST["name"];
 $admno=$_POST["admno"];
 $dept=$_POST["dept"];
@@ -86,16 +111,12 @@ $address=$_POST["address"];
 $phoneno=$_POST["phoneno"];
 $username=$_POST["username"];
 $password=$_POST["password"];
-$server_name="localhost";
-$db_username="root";
-$db_password="";
-$db_name="training";
-$connection=new mysqli($server_name,$db_username,$db_password,$db_name);
-$sql="INSERT INTO `student`(`name`, `admno`, `dept`, `address`, `phoneno`, `username`, `password`) VALUES ('$name',$admno,'$dept','$address',$phoneno,'$username','$password')";
+
+$sql="INSERT INTO `student`(prof_pic_link,`name`, `admno`, `dept`, `address`, `phoneno`, `username`, `password`) VALUES ('$tr','$name',$admno,'$dept','$address',$phoneno,'$username','$password')";
 $result= $connection->query($sql);
 if($result===TRUE)
 {
-echo "Successfully inserted";
+echo "<script> alert('Successfully inserted')  </script>";
 }
 else
 {

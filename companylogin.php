@@ -25,7 +25,7 @@
               <form action="" method="post">
                 <table class="table">
                         <td>Username</td>
-                        <td><input type="text" class="form-control"name="username"></td>
+                        <td><input type="text" class="form-control"name="username" ></td>
                     </tr>
                     <tr>
                         <td>Password</td>
@@ -61,7 +61,8 @@ $db_name="training";
 $connection=new mysqli($server_name,$db_username,$db_password,$db_name);
 $username=$_POST["username"];
 $password=$_POST["password"];
-$sql="SELECT `id`, `name`, `manager`, `contactno`, `username`, `password` FROM `company` WHERE `username`='$username' and 
+echo $sql="SELECT `id`, `name`, `manager`, `contactno`, `username`, `password` FROM `company`
+ WHERE `username`='$username' and 
 `password`='$password' and flag=1";
 $result=$connection->query($sql);
 
@@ -75,7 +76,7 @@ if($result->num_rows>0)
         $_SESSION["companyid"]=$id;
         $_SESSION["name"]=$name;
         echo$id=$row["id"];
-        header('Location:placement.php');
+        header('Location:add_placement.php');
     }
 
 

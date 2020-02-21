@@ -3,6 +3,8 @@ include './admin_navbar.php';
 
 
 ?>
+<br>
+<br>
 <div class="container">
 <div class="row">
 <div class="col col-12 col-sm-2">
@@ -12,8 +14,8 @@ include './admin_navbar.php';
 
 <div class="col col-12 col-sm-8">
 <form action="" method="post"> 
-<table class="table">
-<tr>
+<table class="table table-striped">
+<tr class="table-danger">
     <th>Company Name</th>
     <th>Manager</th>
     <th>Contact Number</th>
@@ -51,7 +53,6 @@ if($res->num_rows>0){
 
         <td><Button type='submit' name='approvebtn'value='$id' class='btn btn-success' > Approve </Button> </td>
 
-        <td><Button type='submit' name='rejectbtn'value='$id' class='btn btn-danger' > Reject </Button> </td>
 
     </tr>";
 

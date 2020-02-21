@@ -3,6 +3,10 @@ include './admin_navbar.php';
 
 
 ?>
+
+<br>
+<br>
+
 <div class="container">
 <div class="row">
 <div class="col col-12 col-sm-2">
@@ -12,8 +16,10 @@ include './admin_navbar.php';
 
 <div class="col col-12 col-sm-8">
 <form action="" method="post"> 
-<table class="table">
-<tr>
+<table class="table table-striped">
+<tr class="table-success">
+
+<th>Student Photo</th>
     <th>Student Name</th>
     <th>Admno</th>
     <th>Department</th>
@@ -29,7 +35,7 @@ $db_username="root";
 $db_password="";
 $db_name="training";
 $connection=new mysqli($server_name,$db_username,$db_password,$db_name);
-$sql="SELECT `id`, `name`, `admno`, `dept`, `address`, `phoneno`, `username`, `password`, 
+$sql="SELECT prof_pic_link,`id`, `name`, `admno`, `dept`, `address`, `phoneno`, `username`, `password`, 
 `flag` FROM `student` WHERE `flag`=0";
     $res=$connection->query($sql);
 
@@ -37,6 +43,8 @@ if($res->num_rows>0){
 
     while($row=$res->fetch_assoc()){
 
+
+        $prof_pic_link=$row["prof_pic_link"];
         $admno=$row["admno"];
         $dept=$row["dept"];
         $phoneno=$row["phoneno"];
@@ -47,6 +55,8 @@ if($res->num_rows>0){
         
 
         echo "<tr>
+
+        <td> <img src='./$prof_pic_link'height='500' width='500' class='img-thumbnail' /></td>
         <td> $name </td>
         <td>  $admno </td>
 
@@ -56,7 +66,6 @@ if($res->num_rows>0){
 
         <td><Button type='submit' name='approvebtn'value='$id' class='btn btn-success' > Approve </Button> </td>
 
-        <td><Button type='submit' name='rejectbtn'value='$id' class='btn btn-danger' > Reject </Button> </td>
 
     </tr>";
 
