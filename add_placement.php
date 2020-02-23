@@ -116,7 +116,8 @@ if(isset($_POST['btnSub'])){
     $db_name="training";
     $connection=new mysqli($server_name,$db_username,$db_password,$db_name);
     $sql="INSERT INTO `placement`(`company_id`, `job_title`, `job_desc`, `sslc_per`, `plus two_per`, `degree_cgpa`, 
-    `backlog`, `jobvenue`, `jobdate`) VALUES($CompanyId,'$jobtitle','$jobdesc',$sslc,$plstwo,$cgpa,$bcklog,'$placedate','$placevenue') ";
+    `backlog`, jobdate,`jobvenue`) VALUES($CompanyId,'$jobtitle',
+    '$jobdesc',$sslc,$plstwo,$cgpa,$bcklog,'$placedate','$placevenue') ";
         $res=$connection->query($sql);
 
         if($res===TRUE){
