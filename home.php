@@ -51,10 +51,10 @@
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav navbar-right">
                         <li>
-                            <a class="page-scroll" href="admin.php">Student Login</a>
+                            <a class="page-scroll" href="admin.php">Admin Login</a>
                         </li>
                         <li>
-                            <a class="page-scroll" href="studlogin.php">Admin Login</a>
+                            <a class="page-scroll" href="studlogin.php">Student Login</a>
                         </li>
 
                         <li>
