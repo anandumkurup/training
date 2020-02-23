@@ -56,7 +56,7 @@ if ($result->num_rows > 0)
 }
 
 
-$sql = "SELECT `id`, `stud_id`, `sem`, `cgpa` FROM `stud_marks` WHERE `stud_id`=$studid";
+$sql = "SELECT `id`, `stud_id`, `sem`, `cgpa`,back_logs FROM `stud_marks` WHERE `stud_id`=$studid";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) 
@@ -66,17 +66,21 @@ if ($result->num_rows > 0)
         <tr class='table-success'>
             <th>SEM</th>
             <th>CGPA</th>
+            <th>BackLogs</th>
        </tr>
       ";
     while($row = $result->fetch_assoc())
      {
         $sem= $row["sem"];
         $cgpa= $row["cgpa"];
+        $back_logs=$row['back_logs'];
 
         echo "
             <tr>
                 <td>$sem</td>
                 <td>$cgpa</td>
+
+                <td>$back_logs</td>
             </tr>
        ";
 
