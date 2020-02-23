@@ -152,7 +152,7 @@ if(isset($_POST['approvebtn'])){
                 $degree_cgpaCriteria=$row['degree_cgpa'];
                 $backlogCriteria=$row['backlog'];
 
-                $Studsql="SELECT DISTINCT(`stud_id`) FROM `stud_marks` WHERE 1";
+                $Studsql="SELECT DISTINCT(`stud_id`) FROM `stud_marks`";
                 $res1=$connection->query($Studsql);
         
                 if($res1->num_rows>0){
