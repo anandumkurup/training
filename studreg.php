@@ -58,7 +58,7 @@
                     </tr>
                     <tr>
                         <td><b>Phone Number</b></td>
-                        <td><input type="text" class="form-control" name="phoneno" pattern=“[6789]{1}[0-9]{9}” required></td>
+                        <td><input type="text" class="form-control" name="phoneno" pattern="[6789]{1}[0-9]{9}" required></td>
                     </tr>
                     <tr>
                         <td><b>Username</b></td>
