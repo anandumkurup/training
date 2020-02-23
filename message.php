@@ -14,12 +14,12 @@ include './admin_navbar.php';
                     <tr>
                         <td>Message</td>
                         <td>
-                        <textarea name="message"cols="60" rows="8"></textarea>
+                        <textarea name="message"cols="60" rows="8" required></textarea>
                         </td>
                     </tr>
                     <tr>
                      <td></td>
-                     <td><input type="submit" value="Submit" class="btn btn-success" name="submit"></td>
+                     <td><input type="submit" value="Submit" class="btn btn-success" name="submit" ></td>
                      </tr>
                      </table>
                 </form>

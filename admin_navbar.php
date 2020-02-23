@@ -51,7 +51,9 @@
  
 
   
-
+    <li class="nav-item">
+      <a class="nav-link active" href="add_training.php">Add Training Documents</a>
+    </li>
   
 
     <li class="nav-item">

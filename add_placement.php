@@ -25,51 +25,51 @@ box-shadow: 13px -11px 11px 3px rgba(0,0,0,0.35);">
 <table class="table table-borderless">
 <tr>
    <td>Job Title</td>
-   <td> <input type="text" name="jobtitle"  class="form-control"></td>
+   <td> <input type="text" name="jobtitle"  class="form-control" required></td>
    
 </tr>
 
 <tr>
    <td>Job Description</td>
-   <td> <input type="text" name="jobdesc"  class="form-control"></td>
+   <td> <input type="text" name="jobdesc"  class="form-control" required></td>
    
 </tr>
 
 
 <tr>
    <td>SSLC Percentage</td>
-   <td> <input type="text" name="sslc"  class="form-control"></td>
+   <td> <input type="text" name="sslc"  class="form-control" min="1" max="100" step="0.1" required></td>
    
 </tr>
 
 
 <tr>
    <td>Plus Two Percentage</td>
-   <td> <input type="text" name="plstwo"  class="form-control"></td>
+   <td> <input type="text" name="plstwo"  class="form-control" min="1" max="100" step="0.1" required></td>
    
 </tr>
 
 <tr>
    <td> Minimum Degree CGPA</td>
-   <td> <input type="text" name="cgpa"  class="form-control"></td>
+   <td> <input type="text" name="cgpa"  class="form-control" min="1" max="10" step="0.1" required></td>
    
 </tr>
 
 <tr>
    <td>No of Backlogs Allowed</td>
-   <td> <input type="number" name="bcklog"  class="form-control"></td>
+   <td> <input type="number" name="bcklog"  class="form-control" min="1" max="10" step="1" required></td>
    
 </tr>
 
 <tr>
    <td>Placement Date</td>
-   <td> <input type="date" name="placedate"  class="form-control"></td>
+   <td> <input type="date" required name="placedate"  class="form-control" min="<?php echo date("Y-m-d") ?>"></td>
    
 </tr>
 
 <tr>
    <td>Placement Venue</td>
-   <td> <input type="text" name="placevenue"  class="form-control"></td>
+   <td> <input type="text" name="placevenue"  class="form-control" required></td>
    
 </tr>
 <tr>
