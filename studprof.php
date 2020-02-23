@@ -5,6 +5,8 @@ include './stud_navbar.php';
 
 
 ?>
+<br>
+<br>
 
 <div class="container">
 <div class="row">
@@ -23,7 +25,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "SELECT `id`, `name`, `admno`, `dept`, `address`, `phoneno`, `username`, `password`, `flag` FROM `student` WHERE `id`=$studid";
+$sql = "SELECT prof_pic_link,`id`, `name`, `admno`, `dept`, `address`, `phoneno`, `username`, `password`, `flag` FROM `student` WHERE `id`=$studid";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
@@ -31,11 +33,20 @@ if ($result->num_rows > 0) {
     while($row = $result->fetch_assoc()) {
         $name= $row["name"];
         $admno= $row["admno"];
+        $prof_pic_link=$row["prof_pic_link"];
 
         $dept= $row["dept"];
         $address= $row["address"];
         $phoneno= $row["phoneno"];
-       echo "<table class='table'>
+       echo "<table class='table table-borderless table-striped'>
+
+       <tr>
+
+<td>  </td>
+
+<td> <img src='./$prof_pic_link'  class='rounded-circle' height='250' width='250' </td>
+
+       </tr>
 
        <tr>
            <td>NAME</td>

@@ -19,31 +19,21 @@ include './stud_navbar.php';
                 <table class="table table-striped">
                   
                     <tr>
-                        <td>Semester</td>
+                        <td>SSLC</td>
                         <td>
-                        <select name="sem" class="form-control">
-
-                        <option value="S1">S1</option>
-                        <option value="S2">S2</option>
-                        <option value="S3">S3</option>
-                        <option value="S4">S4</option>
-                        <option value="S5">S5</option>
-                        <option value="S6">S6</option>
-                        
-                        </select>
+                     <input type="number" class="form-control" name="sslc" min="1" max="100" step="0.1" required>
                         
                         </td>
                     </tr>
-                    <tr>
-                        <td>CGPA</td>
-                        <td><input type="number" class="form-control" name="cgpa" min="1" max="10" step="0.1" required></td>
-                    </tr>
 
                     <tr>
-                        <td>No Of BackLog </td>
-                        <td><input type="text" class="form-control" name="backlog" required  min="0" max="10"></td>
+                        <td>Plus Two</td>
+                        <td>
+                     <input type="number" class="form-control" name="plustwo" min="1" max="100" step="0.1" required>
+                        
+                        </td>
                     </tr>
-
+                  
                      <tr>
                      <td></td>
                      <td><input type="submit" value="Submit" class="btn btn-success" name="submit"></td>
@@ -61,24 +51,23 @@ include './stud_navbar.php';
 if(isset($_POST["submit"]))
 {
 $stud_id=$studid=$_SESSION["studid"];;
-$sem=$_POST["sem"];
-$cgpa=$_POST["cgpa"];
-$backlog=$_POST['backlog'];
+$sslc=$_POST["sslc"];
+$plustwo=$_POST["plustwo"];
 $server_name="localhost";
 $db_username="root";
 $db_password="";
 $db_name="training";
 $connection=new mysqli($server_name,$db_username,$db_password,$db_name);
-
-$sql="SELECT * FROM `stud_marks` WHERE `sem`='$sem' and `stud_id`=$stud_id";
+$sql="SELECT * FROM `basic_Marks` WHERE `StudId`=$stud_id";
 $result= $connection->query($sql);
 if($result->num_rows>0)
 {
-    $sql="UPDATE `stud_marks` SET `cgpa`=$cgpa,back_logs=$backlog WHERE `sem`='$sem' and `stud_id`=$stud_id";
+
+    $sql="UPDATE `basic_Marks` SET `SSLC`=$sslc,`PlusTwo`=$plustwo  WHERE `StudId`=$stud_id";
     $result= $connection->query($sql);
     if($result===TRUE)
     {
-    echo "<script> alert('Updated Succesfully') </script>";
+        echo "<script> alert('Successfully Updated the Marks') </script>";
     }
     else
     {
@@ -87,21 +76,23 @@ if($result->num_rows>0)
     }
 
 }
-
 else{
 
-    $sql="INSERT INTO `stud_marks`(`stud_id`, `sem`, `cgpa`,back_logs) VALUES ('$stud_id','$sem','$cgpa',$backlog)";
+
+    $sql="INSERT INTO `basic_Marks`( `StudId`, `SSLC`, `PlusTwo`) VALUES('$stud_id','$sslc','$plustwo')";
     $result= $connection->query($sql);
     if($result===TRUE)
     {
-    echo "<script> alert('Successfully inserted') </script>";
+        echo "<script> alert('Successfully inserted') </script>";
     }
     else
     {
     echo "Error in insertion" . $connection->error;
     
     }
+
 }
+
 
 
 

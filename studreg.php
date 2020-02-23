@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
-<body style="background-color: grey;" >
+<body style="background-color: white;" >
 <!-- Grey with black text -->
 <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
   <ul class="navbar-nav">
@@ -25,7 +25,7 @@
         </div>
         <div class="col col-12 col-sm-6">
               <form action="" method="post" enctype="multipart/form-data">
-                <table class="table">
+                <table class="table table-borderless table-striped">
                     <h1><center><strong>REGISTRATION</strong></center></h1>
 
                     <tr>
@@ -35,15 +35,15 @@
 
                     <tr>
                         <td><b>Name</b></td>
-                        <td><input type="text" class="form-control"name="name"></td>
+                        <td><input type="text" class="form-control"name="name" required></td>
                     </tr>
                     <tr>
                         <td><b>Admission Number</b></td>
-                        <td><input type="text" class="form-control" name="admno"></td>
+                        <td><input type="text" class="form-control" name="admno" required></td>
                     </tr>
                     <tr>
                         <td><b>Department</b></td>
-                        <td><select class="form-control" name="dept">
+                        <td><select class="form-control" name="dept" >
                         <option value="Computer Science">Computer Science</option>
                         <option value="Commerce">Commerce</option>
                         <option value="Mathematics">Mathematics</option>
@@ -54,24 +54,34 @@
                     </tr>
                     <tr>
                         <td><b>Address</b></td>
-                        <td><input type="text" class="form-control" name="address"></td>
+                        <td><input type="text" class="form-control" name="address" required></td>
                     </tr>
                     <tr>
                         <td><b>Phone Number</b></td>
-                        <td><input type="text" class="form-control" name="phoneno"></td>
+                        <td><input type="text" class="form-control" name="phoneno" pattern=“[6789]{1}[0-9]{9}” required></td>
                     </tr>
                     <tr>
                         <td><b>Username</b></td>
-                        <td><input type="text" class="form-control" name="username"></td>
+                        <td><input type="text" class="form-control" name="username" required></td>
                     </tr>
                     <tr>
                         <td><b>Password</b></td>
-                        <td><input type="password" class="form-control" name="password"></td>
+                        <td><input type="password" class="form-control" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required></td>
                     </tr>
 
                     <tr>
                         <td></td>
                         <td><input type="submit" value="SUBMIT" class="btn btn-success" name="submit"></td>
+                    </tr>
+
+                    <tr>
+                    <td></td>
+                    <td> <a href="studlogin.php">Go To Student Login</a>  </td>
+                    </tr>
+
+                    <tr>
+                    <td></td>
+                    <td> <a href="admin.php">Admin LogIn</a>  </td>
                     </tr>
                     
                 </table>

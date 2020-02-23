@@ -5,6 +5,8 @@ include './stud_navbar.php';
 
 
 ?>
+<br>
+<br>
 
 
 <div class="container">
@@ -27,35 +29,65 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
+
+$sql = "SELECT `Id`, `SSLC`, `PlusTwo` FROM `basic_Marks` WHERE  `StudId`=$studid";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) 
+{
+    echo "<table class='table table-striped'>
+    <tr class='table-success'>
+        <th>SSLC</th>
+        <th>Plus Two</th>
+   </tr>
+  ";
+  while($row = $result->fetch_assoc())
+  {
+     $SSLC= $row["SSLC"];
+     $PlusTwo= $row["PlusTwo"];
+     echo "
+     <tr>
+         <td>$SSLC</td>
+         <td>$PlusTwo</td>
+     </tr>
+";
+  }
+  echo "  </table>";
+}
+
+
 $sql = "SELECT `id`, `stud_id`, `sem`, `cgpa` FROM `stud_marks` WHERE `stud_id`=$studid";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) 
 {
     // output data of each row
-    echo "<table class='table'>
-        <tr>
+    echo "<table class='table table-striped'>
+        <tr class='table-success'>
             <th>SEM</th>
             <th>CGPA</th>
        </tr>
-       </table>";
+      ";
     while($row = $result->fetch_assoc())
      {
         $sem= $row["sem"];
         $cgpa= $row["cgpa"];
 
-        echo "<table class='table'>
+        echo "
             <tr>
                 <td>$sem</td>
                 <td>$cgpa</td>
             </tr>
-         </table>";
+       ";
 
     }
+
+
+    echo "  </table>";
 } 
 else 
 {
-    echo "0 results";
+    echo "No Data ";
 }
 
 ?>

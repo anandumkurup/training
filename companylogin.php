@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
-<body style="background-color: grey;" >
+<body style="background-color: white;" >
 <!-- Grey with black text -->
 <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
   <ul class="navbar-nav">
@@ -16,6 +16,16 @@
     </li>
    </ul>
 </nav> 
+
+
+</div>
+
+
+
+<br><br><br><br>
+<center><h1> TRAINING & Placement Cell </h1></center>
+<center><h4>Company</h4></center>
+
 <div class="container">
         <div class="row">
             <div class="col col-12 col-sm-3">
@@ -23,7 +33,7 @@
         </div>
         <div class="col col-12 col-sm-6">
               <form action="" method="post">
-                <table class="table">
+                <table class="table table-borderless table-striped">
                         <td>Username</td>
                         <td><input type="text" class="form-control"name="username" ></td>
                     </tr>
@@ -41,6 +51,11 @@
                     <tr>
                     <td></td>
                     <td> <a href="companyreg.php">New Companies Register Here</a>  </td>
+                    </tr>
+
+                    <tr>
+                    <td></td>
+                    <td> <a href="admin.php">Admin LogIn</a>  </td>
                     </tr>
                     </table>
                 </form>

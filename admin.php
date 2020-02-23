@@ -15,14 +15,20 @@
     </li>
    </ul>
 </nav> 
+<br><br><br> <br>
 <div class="container">
+<center><h1> TRAINING & Placement Cell </h1></center>
+<center><h4>Administrator</h4></center>
+<br>
         <div class="row">
+
+
             <div class="col col-12 col-sm-3">
 
         </div>
         <div class="col col-12 col-sm-6">
               <form action="" method="POST">
-                <table class="table">
+                <table class="table table-borderless table-striped">
                         <td>Username</td>
                         <td><input type="text" class="form-control"name="username"></td>
                     </tr>
@@ -32,7 +38,7 @@
                     </tr>
                     <tr>
                     <td></td>
-                    <td><input type="submit" value="Login" class="btn btn-success" name="login"></td>
+                    <td> <center>  <input type="submit" value="Login" class="btn btn-success" name="login"> </center></td>
                     </tr>
 <tr>
     <td></td>

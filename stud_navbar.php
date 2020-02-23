@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body style="background-color: grey;"  >
+<body style="background-color: white;"  >
 
 
 <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
@@ -21,12 +21,33 @@
     <li class="nav-item">
       <a class="nav-link active" href="marks.php">Mark Entry</a>
     </li>
-
+    <li class="nav-item">
+      <a class="nav-link active" href="basic_Marks.php">Basic Marks Entry</a>
+    </li>
     <li class="nav-item">
       <a class="nav-link active" href="viewmarks.php">view marks</a>
     </li>
+  
+    <li class="nav-item">
+      <a class="nav-link active" href="view_messages.php"> Notifications</a>
+    </li>
 
-   
+
+    <li class="nav-item">
+      <a class="nav-link active" href="view_trainingdocuments.php"> Training Documents</a>
+    </li>
+
+    <li class="nav-item">
+      <a class="nav-link active" href="view_companies.php">Companies</a>
+    </li>
+
+    <li class="nav-item">
+      <a class="nav-link active" href="viewSelection.php">Placement Selection</a>
+    </li>
+
+    
+
+
     <li class="nav-item">
       <a class="nav-link active" href="admin.php">Log Out</a>
     </li>

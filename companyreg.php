@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
-<body style="background-color: grey;" >
+<body style="background-color: white;" >
 <!-- Grey with black text -->
 <!-- <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
   <ul class="navbar-nav">
@@ -27,33 +27,38 @@
 </nav> -->
     
     <div class="container">
+
+    <br>
+    <br>
+    <br>
+    
         <div class="row">
             <div class="col col-12 col-sm-3">
 
         </div>
         <div class="col col-12 col-sm-6">
               <form action="" method="post">
-                <table class="table">
+                <table class="table table-borderless table-striped">
                     <h1><center><strong>COMPANY REGISTRATION</strong></center></h1>
                     <tr>
                         <td><b>Name</b></td>
-                        <td><input type="text" class="form-control" name="name"></td>
+                        <td><input type="text" class="form-control" name="name" required></td>
                     </tr>
                     <tr>
                         <td><b>Manager</b></td>
-                        <td><input type="text" class="form-control" name="manager"></td>
+                        <td><input type="text" class="form-control" name="manager" required></td>
                     </tr>
                     <tr>
                         <td><b>Contact Number</b></td>
-                        <td><input type="text" class="form-control" name="contactno"></td>
+                        <td><input type="text" class="form-control" name="contactno"pattern=“[6789]{1}[0-9]{9}” required ></td>
                     </tr>
                     <tr>
                         <td><b>Username</b></td>
-                        <td><input type="text" class="form-control" name="username"></td>
+                        <td><input type="text" class="form-control" name="username" required></td>
                     </tr>
                     <tr>
                         <td><b>Password</b></td>
-                        <td><input type="text" class="form-control" name="password"></td>
+                        <td><input type="password" class="form-control" name="password"required></td>
                     </tr>
 
                     <tr>
@@ -65,6 +70,10 @@
                     <tr>
                         <td></td>
                         <td><a href="companylogin.php">Company LogIn</a> </td>
+                    </tr>
+                    <tr>
+                    <td></td>
+                    <td> <a href="admin.php">Admin LogIn</a>  </td>
                     </tr>
                     
                 </table>
