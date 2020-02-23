@@ -58,7 +58,7 @@
                     </tr>
                     <tr>
                         <td><b>Password</b></td>
-                        <td><input type="password" class="form-control" name="password"required></td>
+                        <td><input type="password" class="form-control" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required></td>
                     </tr>
 
                     <tr>
