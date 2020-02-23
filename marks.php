@@ -36,7 +36,7 @@ include './stud_navbar.php';
                     </tr>
                     <tr>
                         <td>CGPA</td>
-                        <td><input type="number" class="form-control" name="cgpa" min="1" max="10" step="0.1" required></td>
+                        <td><input type="number" class="form-control" name="cgpa" min="0" max="10" step="0.1" required></td>
                     </tr>
 
                     <tr>
